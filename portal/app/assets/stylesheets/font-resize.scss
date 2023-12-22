@@ -1,0 +1,192 @@
+.font-resize{
+  &_small {
+    .list-container, .modal-content {
+      font-size: 0.8rem;
+    }
+
+    .list-container .content_scroller {
+      height: calc(100vh - 18.8rem);
+    }
+
+    .details {
+      &_header {
+        font-size: 0.8rem;
+      }
+
+      .form-control {
+        font-size: 0.8rem;
+      }
+    }
+
+    .dashboard_card_info_list, .details-container, .reports-block, .settings {
+      font-size: 0.8rem;
+    }
+
+    .developer-edit-form {
+      height: calc(100vh - 18rem);
+    }
+
+    .add-edit-user .form-group div.invalid-feedback {
+      top: 1.5rem;
+    }
+
+    .permission-group {
+      height: calc(100vh - 34.3rem);
+    }
+
+    .no-result-found {
+      .icon {
+        height: 7.5rem;
+        width: 7.5rem;
+      }
+
+      h5 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .report-set_list_item:last-child .report-set_info .report-set_info_message {
+      bottom: -5px;
+    }
+
+    trix-editor.form-control {
+      height: calc(100vh - 35rem) !important;
+    }
+
+    .show-overlay .message-composer .compose-message .form-control {
+      line-height: 18px;
+    }
+
+    .permission-group_set_list_item input {
+      margin-top: 2px;
+    }
+
+    .log-change-set .list-view_list {
+      height: calc(100vh - 30rem);
+    }
+
+    .show-overlay .details_header_info_label.optional::after {
+      font-size: 0.75rem;
+      left: 0;
+      top: 1.25rem;
+    }
+  }
+
+  &_large {
+    .left-panel .nav-link {
+      font-size: 1.25rem;
+    }
+
+    .list-container, .modal-content {
+      font-size: 1.2rem;
+    }
+
+    .list-container .content_scroller {
+      height: calc(100vh - 19.75rem);
+    }
+
+    .show-overlay .details {
+      height: calc(100vh - 9.5rem);
+    }
+
+    .details {
+      &_header {
+        font-size: 1.2rem;
+
+        .details_header_info_label {
+          width: 120px;
+        }
+      }
+
+      .form-control {
+        font-size: 1.2rem;
+      }
+    }
+
+    .dashboard_card_info_list, .details-container, .reports-block, .settings {
+      font-size: 1.2rem;
+    }
+
+    .dashboard_card_info_list_item_name {
+      width: calc(100% - 135px)
+    }
+
+    .dashboard_card_info_list_item_date {
+      width: 110px;
+    }
+
+    .show-overlay .details_header_info_label, .add-new-user_label {
+      width: 125px;
+    }
+
+    .show-email .details_header_info_label {
+      width: 70px;
+    }
+
+    .show-overlay .details_header_info_panel.edit-developer .details_header_info_panel_item .invalid-feedback {
+      top: 2rem;
+      width: 34rem;
+    }
+
+    .add-new-user_input {
+      width: calc(100% - 125px);
+    }
+
+    .permission-group {
+      height: calc(100vh - 38.5rem);
+    }
+
+    .search-result.users-search .content .content_scroller.permission-group {
+      height: calc(100vh - 38.5rem);
+    }
+
+    trix-toolbar .trix-button--icon {
+      padding: 0 !important;
+      width: 40px;
+    }
+
+    trix-editor.form-control {
+      height: calc(100vh - 39rem) !important;
+    }
+
+    .apps-list .list-view_date {
+      width: 160px;
+    }
+
+    .show-overlay .details {
+      width: 50.14rem;
+    }
+
+    .no-result-found {
+      .icon {
+        height: 230px;
+        width: 230px;
+      }
+
+      h5 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .permission-group_set_list_item input {
+      margin-top: 5px;
+    }
+
+    .log-change-set .list-view_list {
+      height: calc(100vh - 32rem);
+    }
+
+    .show-overlay .details_header_info_label.optional::after {
+      left: 15px;
+      top: 1.75rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<section class="flash-messages">
+  <% if flash[:notice].present? %>
+    <div class="d-flex align-items-center justify-content-between flash-messages-block notice">
+      <div class='d-flex align-items-center flash-messages-block_text'><%= svg_icon_tag('active', { class: 'icon-sm' }) %> <span><%= flash[:notice] %></span></div>
+
+      <div><%= link_to_close_message %></div>
+    </div>
+  <% end %>
+
+  <% if flash[:error].present? %>
+    <div class="d-flex align-items-center align-items-center justify-content-between flash-messages-block error">
+      <div class="flash-messages-block_text"><%= svg_icon_tag('warning', { class: 'icon-sm' }) %> <span><%= flash[:error] %></span></div>
+
+      <div><%= link_to_close_message %></div>
+    </div>
+  <% end %>
+</section>

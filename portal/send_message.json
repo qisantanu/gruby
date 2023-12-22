@@ -1,0 +1,11 @@
+{ 
+
+  "shoryuken_class": { 
+
+    "DataType": "String", 
+
+    "StringValue": "ActiveJob::QueueAdapters::ShoryukenAdapter::JobWrapper" 
+
+  } 
+
+} 

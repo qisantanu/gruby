@@ -1,0 +1,142 @@
+.dashboard {
+
+  &.content {
+    background-color: transparent;
+  }
+
+  &_wrapper {
+    width: calc(33.33% - 10px);
+  }
+
+  &_card {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &_header {
+      padding: 15px;
+
+      &_title {
+        text-transform: uppercase;
+      }
+    }
+
+    &_header {
+      background-color: #f2fbff;
+
+      &_title {
+        color: #59666C;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      &_info {
+        .icon {
+          margin-right: 15px;
+        }
+
+        &_count {
+          font-size: 64px;
+        }
+      }
+    }
+
+    &_info {
+      padding: 15px 0;
+
+      &_title {
+        font-size: 14px;
+        padding: 0 15px;
+      }
+
+      &_list {
+        height: calc(100vh - 25.75rem);
+        margin-right: 1px;
+        overflow: auto;
+
+        &_item {
+          border-top: 2px solid #f0f6f8;
+          cursor: pointer;
+          padding: 0.7rem 15px;
+          transition: all 0.35s ease;
+
+          &:nth-child(2n -1) {
+            background-color: #fbfbff;
+          }
+
+          &:hover {
+            background-color: #f2fbff;
+            cursor: pointer;
+          }
+
+          .icon {
+            height: 20px;
+            margin-right: 10px;
+            width: 20px;
+          }
+
+          &_name {
+            font-weight: 600;
+            text-transform: capitalize;
+            transition: all 0.35s ease;
+            width: calc(100% - 105px);
+
+            &_app {
+              display: inline-block;
+              vertical-align: middle;
+              width: 70%;              
+            }
+          }
+
+          &_date {
+            transition: all 0.35s ease;
+            text-align: right;
+            width: 95px;
+          }
+        }
+      }
+    }
+
+    .chart-container {
+      padding: 1rem 1rem 0;
+      height: calc(100% - 2rem);
+
+      img {
+        max-width: 100%;
+      }
+
+      .chartjs-render-monitor {
+        width: 100% !important;
+      }
+    }
+  }
+
+  &-chart {
+
+    .dashboard_card_header_title {
+      margin-bottom: 0;
+    }
+
+    &_wrapper {
+      height: calc(100vh - 15.75rem);
+
+      .dashboard_card_info {
+        height: 50%;
+      }
+    }
+  }
+
+  .quick-access {
+    margin-top: 24px;
+
+    &_item {
+      width: 50%;
+
+      .icon {
+        margin: 0 5px 3px 0;
+        vertical-align: middle;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<div class="no-result-found unavailable">
+  <%= svg_icon_tag(svg_icon, { class: 'icon-sm' }) %>
+  <h5>No data available</h5>
+  <p>There are no
+    <% if (page_name(params) || local_assigns[:page]) == "users" %>
+      admins
+    <% else %>
+      <%= page_name(params) || local_assigns[:page] %>
+    <% end %>
+    to display
+    <% if local_assigns[:filter].present? %>for the selected filter<% end %>.
+  </p>
+</div>

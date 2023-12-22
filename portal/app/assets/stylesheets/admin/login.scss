@@ -1,0 +1,135 @@
+.login-screen-wrapper {
+  align-items: center;
+  display: flex;
+  height: calc(100vh - 4rem);
+  justify-content: center;
+
+  .user-login {
+    background-color: #fff;
+    border-radius: 5px;
+
+    &_welcome {
+      align-items: center;
+      background: transparent no-repeat 0 0 image-url("sign-in-bg.png");
+      display: flex;
+      font-size: 1.5rem;
+      height: 450px;
+      padding: 0 75px;
+      transition: all 0.35s ease;
+      width: 320px;
+
+      &_title {
+        align-items: center;
+        color: #fff;
+        display: flex;
+        font-size: 1.5rem;
+        flex-flow: column;
+        line-height: 1.7rem;
+        text-transform: uppercase;
+
+        .welcome-to {
+          font-size: 18px;
+        }
+
+        strong {
+          font-size: 2rem;
+          margin-top: 25px;
+        }
+      }
+
+      .icon {
+        height: 110px;
+        margin-bottom: 60px;
+        opacity: 0.7;
+        width: 110px;
+      }
+    }
+
+    &_unit {
+      padding: 0 100px;
+      transition: all 0.35s ease;
+      width: 510px;
+    }
+
+    .card-title {
+      color: #90A7B1;
+      font-weight: 700;
+    }
+
+    .otp-resend {
+      margin-top: 3rem;
+    }
+
+    &.user-login-invalid {
+      background-color: #f2fbff;
+    }
+  }
+
+  .form-signin {
+    &_unit-group {
+      margin: 60px 0 30px;
+
+      .form-label-group {
+
+        .form-control {
+          width: 310px;
+        }
+
+        .input-set-frist-filed, .input-set-frist-filed:focus {
+          border-radius: 0.25rem 0.25rem 0 0;
+          border-bottom: none !important;
+
+          &.field-error {
+            background-color: #FDEEED !important;
+          }
+        }
+
+        .input-set-second-filed, .input-set-second-filed:focus {
+          border-radius: 0 0 0.25rem 0.25rem;
+
+          &.field-error {
+            background-color: #FDEEED !important;
+          }
+        }
+      }
+    }
+  }
+
+  input.form-control.field-error, input.form-control.field-error:focus {
+    background-color: #FDEEED !important;
+    border: 1px solid #E84F4F !important;
+  }
+
+  .form-validation-error {
+    color: #E84F4F;
+    font-size: 12px;
+    margin: 5px 0 0;
+    text-align: right;
+  }
+
+  .confirm-otp {
+    margin-top: 30px;
+  }
+
+  .forgot-password {
+    margin-top: 70px;
+  }
+}
+
+.form-signin {
+  &.reset-password {
+    width: 100%;
+
+    .modal-body {
+      padding: 2rem;
+    }
+  }
+}
+
+.js-resend-otp, .js-resend-otp-countdown {
+  display: none;
+}
+
+.disabled-resend-code {
+  color: #abbdc4;
+}

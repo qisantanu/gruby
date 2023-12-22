@@ -1,0 +1,33 @@
+<% if developers.count.zero? %>
+  <% if local_assigns[:filter] %>
+    <%= render 'shared/no_data', svg_icon: 'no-data-dev', filter: true, page: "developers" %>
+  <% elsif local_assigns[:search] %>
+   <%= render 'shared/no_results' %>
+  <% else %>
+    <%= render 'shared/no_data', svg_icon: 'no-data-dev' %>
+  <% end %>
+<% else %>
+  <section class="list-view developers-list">
+    <header class="d-flex align-items-center justify-content-between list-view_header">
+      <strong class="cell list-view_name"><%= sortable 'Developer', :name, nil, params %></strong>
+      <strong class="cell list-view_company"><%= sortable 'Developer', :company, 'Company', params %></strong>
+      <strong class="cell text-right list-view_date"><%= sortable 'Developer', :created_at, 'added on', params %></strong>
+      <strong class="cell developers-list_app">Apps</strong>
+      <strong class="cell text-center developers-list_count"><%= sortable 'Developer', :apps_count, 'No.', params %></strong>
+      <strong class="cell list-view_email"><%= sortable 'Developer', :email, 'Email', params %></strong>
+      <strong class="cell text-center list-view_status"><%= sortable 'Developer', :status, nil, params %></strong>
+      <strong class="cell list-view_status-change"></strong>
+    </header>
+
+    <ul class="list-unstyled content_scroller list-view_list">
+      <% developers.each do |developer| %>
+        <%= render 'shared/developer', developer: developer %>
+      <% end %>
+    </ul>
+  </section>
+
+  <div class="d-flex align-items-center justify-content-between pagination-wrapper">
+    <span><%= paginate developers, remote: true, params: { page_type: 'developer' } %></span>
+    <span><%= pagination_count(developers) %></span>
+  </div>
+<% end %>

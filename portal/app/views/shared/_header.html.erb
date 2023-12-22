@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <span class="navbar-brand"><%= svg_icon_tag('logo', { class: 'icon-sm icon-logo' }) %> <span>Extended OBU Library</span></span>
+  
+
+  <div class="d-flex align-items-center search-and-user-bar" id="navbarSupportedContent">
+    <%= form_tag selected_search_path(params), class: 'form-inline search-now js-validate-search', id: 'form-inline', method: :get do |f| %>
+
+        <input name='query' class="form-control mr-sm-2 search-now-field" id="search" type="search" placeholder="Search" aria-label="Search" value="<%= params[:query] %>">
+
+        <div class="btn-group search-filter">
+          <div class="dropdown">
+            <a class="dropdown-toggle" href="#" role="button" id="search_type_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= selected_search_type(params) %>
+            </a>
+
+            <div class="dropdown-menu">
+              <% ['All', 'Developers', 'Apps', 'Mails', 'Admins'].each do |option| %>
+                <a class="dropdown-item js-change-search-type"><%= option %></a>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <% if params[:query].present? %>
+          <%= link_to '', request.path, title: 'Clear Search', class: 'clear-search' %>
+        <% end %>
+    <% end %>
+
+
+    <% if has_permission?(download_admin_data_export_index_path) %>
+      <a class="export-data js-modal-open" data-modal-id="export_data_modal"><%= svg_icon_tag('export', class: 'icon-sm') %></a>
+    <% else %>
+        <div class="export-data information-with-tooltip">
+          <a class="disabled" title="Export Data">
+            <%= svg_icon_tag('export', class: 'icon-sm') %>
+          </a>
+          
+          <p class="information-with-tooltip_message">You do not have permission to access this feature.</p>
+        </div>
+    <% end %>
+
+
+    <% if current_user.present? %>
+      <div class="dropdown user-dropdown">
+        <span class="dropdown-toggle user-dropdown_user" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= svg_icon_tag('profile', { class: 'icon-sm' }) %>
+        </span>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="d-flex flex-column logged-in-as">
+            <span class="logged-in-as_header">Signed in as</span>
+
+            <div class="d-flex flex-column logged-in-as_user-and-email">
+              <span class=" logged-in-as_user-and-email_user"><%= current_user.name %></span>
+              <span class="logged-in-as_user-and-email_email"><%= current_user.email %></span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <%= link_to 'Change Password', edit_password_admin_users_path, class: 'js-display-new-modal' %>
+            <%= link_to_logout %>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</nav>

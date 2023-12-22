@@ -1,0 +1,33 @@
+.developers-search  {
+  .list-container .content_scroller {
+    height: calc(100vh - 19.2rem);
+  }
+}
+
+.search-invalid {
+    background-color: #43626d;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 1em;
+    padding: 3px 10px;
+    position: relative;
+
+    &::after {
+      border-color: transparent transparent transparent #43626d;
+      border-style: solid;
+      border-width: 8px 12px;
+      content: " ";
+      dispaly: inline-block;
+      height: 0;
+      position: absolute;
+      right: -23px;
+      top: 6px;
+    }
+}
+
+.search-summary {
+  background-color: #ebf6f1;
+  border-radius: 0.2rem;
+  margin-bottom: 0;
+  padding: 0 0.5rem;
+}

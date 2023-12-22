@@ -1,0 +1,14 @@
+<%= form_tag filter_path(local_assigns[:type], local_assigns[:search_page], local_assigns[:search_all]), class: "d-flex justify-content-between form-inline filter-bar", remote: true, method: :get do %>
+  <div class="d-flex align-items-center">
+    <h5>Filter</h5>
+
+    <div class="form-group">
+      <% if local_assigns[:type] == "mail" %>
+        <%= render 'shared/recipient_dropdown', recipient_list: Email.recipients %>
+      <% else %>
+        <%= render 'shared/status_dropdown', status_list: status_list(local_assigns[:type]) %>
+      <% end %>
+    </div>
+  </div>
+  <%= hidden_field_tag :page_type, local_assigns[:type]  if local_assigns[:search_all] %>
+<% end %>

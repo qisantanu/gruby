@@ -1,0 +1,685 @@
+@import "colors";
+
+.show-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+
+  .btn {
+    min-width: 130px;
+  }
+
+  .details {
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
+    height: calc(100vh - 9.2rem);
+    transition: all 0.35s ease;
+    width: 47.14rem;
+
+    &_header {
+      background-color: #f2fbff;
+      border-radius: 5px 0 0;
+      height: 5rem;
+      padding: 1.5rem 2rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      .page-title {
+        margin: 0;
+        position: relative;
+        width: 19.28rem;
+
+        .admin-name {
+          display: inline-block;
+          width: 19.28rem;
+        }
+
+        &_text {
+          display: inline-block;
+          text-transform: capitalize;
+          width: 100%;
+        }
+
+        &_icon-container {
+          background-color: #2497cc;
+          border: 2px solid #f2fbff;
+          border-radius: 50%;
+          display: inline-block;
+          height: 2.85rem;
+          left: -50px;
+          padding: 3px 0 0 6px;
+          position: absolute;
+          top: -7px;
+          width: 2.85rem;
+        }
+      }
+
+      &_info {
+        background-color: #f2fbff;
+        padding: 0 2rem 1.5rem;
+
+        &_panel {
+          margin-bottom: 0;
+          width: 50%;
+
+          &_item {
+            margin-bottom: 5px;
+          }
+
+          &.edit-developer, &.edit-user {
+            margin-bottom: 0;
+            width: 100%;
+
+            .form-control {
+              width: 15rem;
+            }
+          }
+
+          &.edit-developer {
+            .details_header_info_panel_item {
+              margin-bottom: 1.75rem;
+              position: relative;
+
+              .status {
+                padding: 3px 0.5rem 0;
+                width: auto;
+              }
+
+              .current-status {
+                margin-right: 1rem;
+                text-transform: uppercase;
+              }
+
+              label[for="developer_sending_email_true"], label[for="developer_sending_email_false"] {
+                font-weight: normal;
+              }
+
+              label[for="developer_sending_email_true"] {
+                margin-right: 15px;
+              }
+
+              .invalid-feedback {
+                left: 0;
+                position: absolute;
+                top: 1.5rem;
+                width: 22.5rem;
+              }
+            }
+          }
+        }
+
+        &_label {
+          display: inline-block;
+          position: relative;
+          transition: all 0.35s ease;
+          width: 110px;
+
+          &.optional {
+            &::after {
+              border-color: #90a7b1;
+              border-radius: 6px;
+              border-style: solid;
+              border-width: 0 1px;
+              content: "Optional";
+              color: #90a7b1;
+              font-size: 0.9rem;
+              font-weight: 400;
+              left: 3px;
+              line-height: 1;
+              padding: 0 0.25rem;
+              position: absolute;
+              top: 1.5rem;
+            }
+          }
+        }
+
+        &_value {
+          display: inline-block;
+          vertical-align: top;
+          width: calc(100% - 150px);
+        }
+      }
+
+      .status {
+        background-color: #fff;
+        border: 1px solid #90A7B1;
+        line-height: 1.5rem;
+        margin-right: 12px;
+        width: 8.5rem;
+
+        &:hover {
+          background-color: #F2FBFF;
+          border-color: #0098D0;
+        }
+
+        &.deactivate {
+          color: #59666C;
+        }
+
+        &.active, &.block, &.resend {
+
+        }
+      }
+
+      &_control {
+        text-align: right;
+        width: 17.85rem;
+      }
+    }
+
+    .apps-list_more {
+      margin-left: 0.5rem;
+
+      .icon {
+        height: 1.4rem;
+        margin-top: -0.2rem;
+        width: 1.4rem;
+      }
+
+      &.icon-schedule {
+        height: 16px;
+        width: 16px;
+      }
+    }
+
+    .close-details {
+      margin-left: 25px;
+
+      .icon {
+        height: 16px;
+        width: 16px;
+      }
+    }
+
+    .page-title {
+      color: #59666C;
+      font-size: 1.6rem;
+      text-transform: capitalize;
+    }
+
+    &.suspended {
+      .details_header, .details_header_info {
+        background-color: #feeeee;
+
+        .page-title_icon-container {
+          border: 2px solid #feeeee;
+        }
+      }
+
+      .apps-list {
+        .status {
+          &.active, &.block {
+            background-color: #e1edf0;
+            color: #99aeb8;
+          }
+        }
+      }
+    }
+
+    .compose-email-to-and-subject {
+      .search-filter {
+        width: 15rem;
+      }
+
+      .dropdown-menu {
+        right: 10px;
+      }
+
+      .custom-select {
+        text-transform: capitalize;
+        width: 18rem;
+      }
+      .custom-recipient-select {
+        text-transform: capitalize;
+        width: 18rem;
+      }
+      .message-subject {
+        width: 33rem;
+
+        & + .invalid-feedback {
+          left: 7.25rem;
+          right: 0;
+          top: 1.75rem;
+          width: 33rem;
+        }
+      }
+    }
+
+    .developer-details-from-apps {
+      margin: 0.3rem 0 0 1rem;
+    }
+  }
+
+  &.invited {
+    .details {
+      &_header, .add-edit-user, .details_header_info {
+        background-color: #E1EDF0;
+      }
+    }
+  }
+
+  &.deactivated {
+    .details {
+      background-color: #F2FBFF;
+      color: #90A7B1;
+
+      &_header, .add-edit-user, .details_header_info {
+        background-color: #E1EDF0;
+      }
+    }
+  }
+
+  &.developer-not-active {
+    .details {
+      background-color: #F2FBFF;
+      color: #90A7B1;
+
+      &_header, .add-edit-user, .details_header_info {
+        background-color: #E1EDF0;
+      }
+    }
+  }
+
+
+  .details-container {
+    padding: 20px 30px 10px;
+
+    &_header {
+      border-bottom: 2px solid #f0f6f8;
+      padding-bottom: 15px;
+
+      &.zero-result {
+        border-bottom: none;
+      }
+
+      .resend-account-key {
+        border-radius: 4px;
+        padding: 0 1rem;
+      }
+    }
+
+    &_title {
+      font-size: 1rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+
+      &_app-count {
+        display: inline-block;
+        margin: -3px 0 0 5px;
+        vertical-align: middle;
+      }
+    }
+
+    &_sub-title {
+      margin-bottom: 0;
+      text-transform: capitalize;
+    }
+
+    .apps-list {
+      height: calc(100vh - 27rem);
+      overflow: auto;
+
+      .card-header {
+        border-bottom: none;
+        cursor: pointer;
+        padding-right: 20px;
+
+        .platform-icon {
+          margin-right: 0.5rem;
+        }
+
+        &_action-set {
+          position: relative;
+
+          .apps-list_more, .status {
+            margin-right: 0.5rem;
+          }
+
+          .apps-list_more {
+            position: relative;
+            z-index: 999;
+          }
+
+          .apps-list_more, .apps-list_status {
+            opacity: 0;
+            transition: all 0.35s ease;
+          }
+
+          .apps-list_collapse {
+            display: inline-block;
+            transition: all 0.35s ease;
+          }
+
+          .apps-list_status {
+            margin-right: 10px;
+            padding: 2px 0 0;
+            text-align: center;
+          }
+
+          .icon {
+            height: 1.28rem;
+            width: 1.28rem;
+          }
+        }
+
+        &.collapsed {
+          .apps-list_collapse {
+            transform: rotate(180deg);
+          }
+        }
+
+        &:hover {
+          .apps-list_more, .apps-list_status {
+            opacity: 1;
+          }
+
+          .apps-list_title {
+            color: $primary;
+          }
+        }
+      }
+
+      .collapse {
+        &.show {
+          border-bottom: 2px solid #e2e2e2;
+        }
+      }
+
+      &_title {
+        font-size: 1rem;
+        overflow: hidden;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 300px;
+      }
+
+      .card-body {
+        padding: 0 3.2rem 0 1.85rem;
+
+        strong {
+          color: #90A7B1;
+        }
+      }
+    }
+
+    .no-result-found {
+      background: none;
+      height: calc(100vh - 435px);
+
+      h5 {
+        font-size: 23px;
+      }
+
+      .icon {
+        background-size: 95%;
+        height: 120px;
+        width: 120px;
+      }
+    }
+  }
+
+  .message-composer {
+    label {
+      font-weight: 600;
+      width: 100px;
+    }
+
+    .compose-email-to-and-subject {
+      background-color: #f2fbff;
+      padding: 0 2rem 1.5rem;
+      width: 100%;
+
+      .form-group:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .compose-message {
+      position: relative;
+
+      .form-control {
+        background-color: #fff !important;
+        border: none;
+        height: 100%;
+        line-height: 20px;
+
+        span, strong, em, del {
+         background: none !important;
+        }
+      }
+
+      .error {
+        bottom: 1rem;
+        color: #f84f4f;
+        font-size: 0.8rem;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+      }
+    }
+
+    &_footer {
+      border-top: 1px solid #E1EDF0;
+      padding: 0.75rem 0;
+      text-align: center;
+    }
+  }
+}
+
+.salutation {
+  color: #90a7b1;
+  text-transform: capitalize;
+  padding-bottom: 15px;
+}
+
+.salutation-show {
+  text-transform: capitalize;
+  padding-bottom: 15px;
+}
+
+.signature-show {
+  text-transform: capitalize;
+  padding-top: 15px;
+}
+
+
+.close {
+  .icon {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.current-status {
+  color: #59666C;
+  font-size: 13px;
+  text-transform: uppercase;
+
+  &.active-text {
+    color: #009164;
+  }
+
+  &.block-text {
+    color: #E84F4F;
+  }
+
+  &.invited-text {
+    color: #0098D0;
+  }
+
+  &.expired-text {
+    color: #90A7B1;
+  }
+
+  &.deactivated-text {
+    color: #90A7B1;
+  }
+
+  &.developer-not-active-text {
+    color: #90A7B1;
+  }
+}
+
+.permission-group {
+  display: flex;
+  flex-flow: wrap;
+  height: calc(100vh - 36rem);
+
+  &_set {
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    width: calc(50% - 2rem);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &_title {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &_list {
+      margin: 0;
+
+      &_item {
+        float: left;
+        height: 40px;
+        width: 50%;
+
+        input {
+          margin: 3px 6px 0 0;
+        }
+
+        label {
+          font-weight: normal;
+          margin-bottom: 0;
+        }
+
+        input, label {
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+
+.overlay-button-group {
+  border-top: 1px solid #E1EDF0;
+  height: 4.4rem;
+  padding: 1rem 0;
+
+  .btn {
+    margin: 0 1rem;
+  }
+}
+
+.standard-permission, .additional-permission {
+  .details-container_title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.standard-permission {
+  margin-bottom: 2rem;
+}
+
+.additional-permission {
+  label small {
+    display: block;
+    font-size: 13px;
+  }
+}
+
+.edit-user {
+  display: flex;
+  flex-flow: wrap;
+
+  .current-status {
+    margin-right: 1rem;
+  }
+
+  .details_header_info_panel_item {
+    width: 50%;
+  }
+}
+
+.user-details-input-group {
+  width: 100%;
+}
+
+.user-details-input {
+  margin-bottom: -1rem;
+  margin-top: 2rem;
+
+  .button-group {
+    margin-right: 2rem;
+    width: 300px;
+  }
+}
+
+.resend-account-key {
+  height: 2.14rem;
+  padding-top: 7px;
+}
+
+.apps-dev-list {
+  &_dev-name {
+    font-size: 1.2rem;
+  }
+
+  &_container {
+    height: calc(100vh - 26rem);
+
+    &_header {
+      padding-top: 0.5rem;
+    }
+  }
+
+  .app-belongs-to-dev-list {
+    border-bottom: 1px solid #e2e2e2;
+    flex-wrap: wrap;
+    margin: 1rem 0 0;
+
+    &_item {
+      margin-bottom: 1rem;
+      width: 50%;
+    }
+  }
+}
+
+.developer-edit-form {
+  height: calc(100vh - 18.5rem);
+
+  .edit-developer .details_header_info_panel_item .form-control {
+    width: 25rem;
+
+    + .invalid-feedback {
+      width: 33rem;
+    }
+  }
+}
+
+.show-email {
+  .details_header_info_label {
+    width: 70px;
+  }
+
+  .details_header_info_value {
+    width: calc(100% - 90px);
+  }
+}
+
+.developer-edit.show-overlay .details .page-title {
+  color: #90A7B1;
+}

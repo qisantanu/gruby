@@ -1,0 +1,228 @@
+$extra-small-icon: 16px;
+$small-icon: 24px;
+$medium-icon: 50px;
+$large-icon: 70px;
+
+.icon {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  display: inline-block;
+  transition: all 0.35s ease;
+  vertical-align: middle;
+
+  &-xs {
+    height: $extra-small-icon;
+    width: $extra-small-icon;
+  }
+
+  &-sm {
+    height: $small-icon;
+    width: $small-icon;
+  }
+
+  &-md {
+    height: $medium-icon;
+    width: $medium-icon;
+  }
+
+  &-lg {
+    height: $large-icon;
+    width: $large-icon;
+  }
+
+  &-loader {
+    height: 200px;
+    width: 200px;
+  }
+
+  &-logo {
+    background-image: image_url("icons/icon_logo.svg");
+  }
+
+  &-profile {
+    background-image: image_url("icons/icon_profile.svg");
+  }
+
+  &-home {
+    background-image: image_url("icons/icon_home.svg");
+  }
+
+  &-developer {
+    background-image: image_url("icons/icon_developer.svg");
+  }
+
+  &-app {
+    background-image: image_url("icons/icon_app.svg");
+  }
+
+  &-mail {
+    background-image: image_url("icons/icon_mail.svg");
+  }
+
+  &-report {
+    background-image: image_url("icons/icon_report.svg");
+  }
+
+  &-user {
+    background-image: image_url("icons/icon_user.svg");
+  }
+
+  &-log {
+    background-image: image_url("icons/icon_log.svg");
+  }
+
+  &-add-user {
+    background-image: image_url("icons/icon_add-user.svg");
+  }
+
+  &-settings {
+    background-image: image_url("icons/icon_settings.svg");
+  }
+
+  &-globe {
+    background-image: image_url("icons/icon_globe.svg");
+  }
+
+  &-ios {
+    background-image: image_url("icons/icon_ios.svg");
+    margin-top: -4px;
+  }
+
+  &-android {
+    background-image: image_url("icons/icon_android.svg");
+  }
+
+  &-caret {
+    background-image: image_url("icons/icon_caret.svg");
+  }
+
+  &-search {
+    background-image: image_url("icons/icon_search.svg");
+  }
+
+  &-active {
+    background-image: image_url("icons/icon_active.svg");
+  }
+
+  &-warning {
+    background-image: image_url("icons/icon_warning.svg");
+  }
+
+  &-deactivate {
+    background-image: image_url("icons/icon_deactivate.svg");
+  }
+
+  &-block {
+    background-image: image_url("icons/icon_block.svg");
+  }
+
+  &-edit {
+    background-image: image_url("icons/icon_edit.svg");
+  }
+
+  &-save-tick {
+    background-image: image_url("icons/white_tick.svg");
+  }
+
+  &-edit-white {
+    background-image: image_url("icons/icon_edit-white.svg");
+  }
+
+  &-more {
+    background-image: image_url("icons/icon_more.svg");
+  }
+
+  &-schedule {
+    background-image: image_url("icons/icon_schedule.svg");
+  }
+
+  &-arrow {
+    background-image: image_url("icons/icon_arrow.svg");
+  }
+
+  &-cross {
+    background-image: image_url("icons/icon_cross.svg");
+  }
+
+  &-resend {
+    background-image: image_url("icons/icon_resend.svg");
+  }
+
+  &-language {
+    background-image: image_url("icons/icon_language.svg");
+  }
+
+  &-calendar {
+    background-image: image_url("icons/icon_calendar.svg");
+  }
+
+  &-visibility-yes {
+    background-image: image_url("icons/visibility-yes.svg");
+  }
+
+  &-visibility-no {
+    background-image: image_url("icons/visibility-no.svg");
+  }
+
+  &-no-result {
+    background-image: image_url("icons/icon_no-result.svg");
+  }
+
+  &-no-data-dev {
+    background-image: image_url("icons/icon_no-data-dev.svg");
+  }
+
+  &-no-data-app {
+    background-image: image_url("icons/icon_no-data-app.svg");
+  }
+
+  &-no-data-mail {
+    background-image: image_url("icons/icon_no-data-mail.svg");
+  }
+
+  &-no-data-user {
+    background-image: image_url("icons/icon_no-data-user.svg");
+  }
+
+  &-no-data-log {
+    background-image: image_url("icons/icon_no-data-log.svg");
+  }
+
+  &-no-app-to-dev {
+    background-image: image_url("icons/icon_no-app-to-dev.svg");
+  }
+
+  &-check-circle-green {
+    background-image: image_url("icons/icon_check-circle-green.svg");
+  }
+
+  &-check-circle-grey {
+    background-image: image_url("icons/icon_check-circle-grey.svg");
+  }
+
+  &-cross-circle-red {
+    background-image: image_url("icons/icon_cross-circle-red.svg");
+  }
+
+  &-extended-menu {
+    background-image: image_url("icons/icon_extended-menu.svg");
+  }
+
+  &-font-resize {
+    background-image: image_url("icons/icon_font-resize.svg");
+  }
+
+  &-export {
+    background-image: image_url("icons/icon_export.svg");
+  }
+
+  &-loader {
+    background-image: image_url("icons/icon_loader.svg");
+  }
+
+  &-small-info {
+    background-image: image_url("icons/icon_small-info.svg");
+  }
+}

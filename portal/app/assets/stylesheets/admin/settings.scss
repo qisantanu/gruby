@@ -1,0 +1,134 @@
+.configurations, .datapoints {
+  width: calc(50% - 8px);
+
+  .filter-bar {
+    h5 {
+      color: #59666C;
+    }
+  }
+}
+
+.settings-wrapper {
+  height: calc(100vh - 17.5rem);
+
+  .value-filed {
+    width: 4.5rem;
+  }
+
+  input[type="radio"] {
+    margin-right: 0.3rem;
+    vertical-align: middle;
+  }
+
+  .settings-field-edit_label {
+    margin-bottom: 0;
+  }
+}
+
+.settings-container {
+  .status.status-action.save{
+    background-color: #00b58b;
+    color: #fff;
+  }
+}
+
+.settings-list {
+  &_header, &_content {
+    margin-bottom: 0;
+
+    li {
+      border-bottom: 2px solid #f0f6f8;
+      padding: 10px 20px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:nth-child(2n -1) {
+        background-color: #fbfbff;
+      }
+
+      &:hover {
+        background-color: #f2fbff;
+      }
+
+      .settings-list_name {
+        font-weight: 600;
+        width: calc(40% - 2rem);
+      }
+
+      .settings-list_value {
+        position: relative;
+        text-align: right;
+        width: calc(60% - 2rem);
+
+        input {
+          text-align: right;
+        }
+
+        .config-value {
+          word-break: break-all;
+        }
+
+        .caching-time {
+          margin-left: 0.25rem;
+        }
+
+        .caching_limit.error {
+          bottom: -8px;
+          position: absolute;
+          right: 0;
+          top: auto;
+        }
+
+        .error {
+          position: absolute;
+          right: 0.25rem;
+          top: 1.75rem;
+        }
+      }
+    }
+  }
+
+  &_header {
+    border-bottom: 1px solid #dee2e6;
+    color: #90A7B1;
+    text-transform: uppercase;
+  }
+}
+
+.settings-edit-buttons {
+  .btn {
+    margin-right: 1rem;
+  }
+}
+
+.settings {
+  .filter-bar {
+    .information-with-tooltip_message {
+      margin-bottom: 0;
+    }
+  }
+
+  .status.status-action.edit.disabled {
+    color: #aeaeae;
+    cursor: not-allowed;
+  }
+
+  .information-with-tooltip_message {
+    right: 90px;
+  }
+}
+
+.content_scroller.settings {
+  height: 100%;
+}
+
+.js-settings-field-edit, .js-cancel-settings, .js-save-settings {
+  display: none;
+}
+
+.settings-field-display {
+  text-transform: capitalize;
+}
+

@@ -1,0 +1,340 @@
+@import "colors";
+
+.list-container {
+  margin-bottom: 0;
+  padding: 0;
+
+  .content_scroller {
+    height: calc(100vh - 19.2rem);
+  }
+}
+
+.list-view {
+  .blacklisted {
+    color: $titleColor;
+  }
+  .developer-not-active {
+    color: $titleColor;
+  }
+
+  &_header {
+    color: $titleColor;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+
+    strong.cell {
+      font-weight: 600;
+    }
+
+    a {
+      color: $titleColor;
+      transition: all 0.35s ease;
+    }
+
+    @mixin caret-sprite-generated {
+      background-color: transparent;
+      background-image: image_url("icons/caret-sprite.png");
+      background-repeat: no-repeat;
+      content: " ";
+      display: inline-block;
+      height: 5px;
+      position: absolute;
+      width: 10px;
+    }
+
+    .sorting-caret, .sorted-caret {
+      background-color: transparent;
+      background-image: image_url("icons/caret-sprite.png");
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+
+    .sorting-caret {
+      background-position: 0 0;
+      height: 13px;
+      margin-left: 0.25rem;
+      opacity: 0;
+      position: relative;
+      transition: all 0.15s ease;
+      vertical-align: middle;
+      width: 10px;
+
+      .sorted-caret {
+        height: 5px;
+        left: 0;
+        position: absolute;
+        width: 10px;
+
+        &.up {
+          background-position: 0 -28px;
+          top: 0;
+        }
+
+        &.down {
+          background-position: 0 -34px;
+          bottom: 1px;
+        }
+      }
+    }
+
+    .sort-now:hover, .sorted:hover {
+      .sorted-caret {
+        &::after {
+          @include caret-sprite-generated;
+          background-position: 0 -14px;
+          left: 0;
+          top: 0;
+        }
+      }
+      .sorted-caret.down {
+        background-image: none;
+
+        &::after {
+          @include caret-sprite-generated;
+          background-position: 0 -14px;
+          left: 0;
+          top: -7px;
+        }
+      }
+
+      .sorted-caret.up {
+        background-image: none;
+
+        &::after {
+          @include caret-sprite-generated;
+          background-position: 0 -21px;
+          left: 0;
+          top: 7px;
+        }
+      }
+    }
+
+    .sorted, &:hover {
+      .sorting-caret {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      a {
+        color: $anchorLinkColor;
+
+        &:hover {
+          color: $anchorLinkColorHover;
+        }
+      }
+    }
+  }
+
+  &_list {
+    margin-bottom: 0;
+
+    &_item {
+      border-top: 1px solid #eaeaea;
+      padding: 0.5rem 1.5rem;
+      transition: all 0.35s ease;
+
+      .status-action {
+        opacity: 0;
+        padding: 2px 0 0;
+        text-align: center;
+        transition: all 0.35s ease;
+
+        &.block {
+          border-color: #E84F4F;
+        }
+      }
+
+      &:nth-child(2n -1) {
+        background-color: #fbfbff;
+      }
+
+      &:hover {
+        background-color: #f2fbff;
+        cursor: pointer;
+
+        .status-action {
+          opacity: 1;
+
+          &.block {
+            &:hover {
+              border-color: #0098D0;
+            }
+          }
+        }
+      }
+
+      .list-view_name {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &_name {
+    font-weight: 600;
+    padding-right: 10px;
+  }
+
+  &_date {
+    padding-right: 25px;
+    width: 130px;
+  }
+
+  &_status {
+    width: 110px;
+  }
+
+  &_status-change {
+    width: 40px;
+  }
+
+  /**Audit Log**/
+
+  &_log-id {
+    width: 80px;
+  }
+
+  &_user, &_item {
+    max-width: calc((100% - 534px) / 2);
+    padding-right: 15px;
+    width: 20%;
+  }
+
+  &_module {
+    width: 120px;
+  }
+
+  &_event {
+    width: 90px;
+  }
+
+  &_log-filed {
+    width: 190px;
+  }
+
+  &_old-value, &_new-value {
+    padding-right: 15px;
+    width: calc((100% - 190px) / 2);
+  }
+}
+
+.developers-list {
+  /*Fixed width => (130 + 110 + 60 + 40) = 340*/
+
+  .list-view_name {
+    width: calc((100% - 340px) / 4);
+  }
+
+  &_app {
+    width: calc((100% - 340px) / 4);
+  }
+
+  &_count {
+    width: 60px;
+  }
+
+  .list-view_email, .list-view_company {
+    padding-right: 2rem;
+    width: calc((100% - 340px) / 4);
+  }
+}
+
+.developers-list_app_count, .apps-list_developer_count {
+  color: #90A7B1;
+  font-size: 0.8rem;
+}
+
+.apps-list {
+  &_platform-icon {
+    width: 60px;
+  }
+
+  .list-view_name {
+    padding-right: 10px;
+  }
+
+  .list-view_name, &_bundle-id, &_developer {
+    width: calc((100% - 280px) / 3);
+  }
+
+  .list-view_date {
+    padding-right: 40px;
+    width: 150px;
+  }
+
+  .list-view_status {
+    width: 150px;
+  }
+}
+
+.emails-list {
+  .list-view_header {
+    .emails-list_subject {
+      text-transform: uppercase;
+    }
+  }
+
+  .content_scroller {
+    height: calc(100vh - 19.2rem);
+  }
+
+  &_recipients {
+    padding-right: 25px;
+    width: 230px;
+  }
+
+  &_subject {
+    padding-right: 25px;
+    text-transform: capitalize;
+    width: calc(100% - 750px);
+  }
+
+  &_sender {
+    padding-right: 25px;
+    width: 270px;
+  }
+
+  .list-view_date {
+    padding-right: 15px;
+    width: 230px;
+  }
+
+  .list-view_header {
+    .list-view_date {
+      margin-right: 15px;
+    }
+  }
+}
+
+.users-list {
+  .list-view_name, .list-view_email {
+    width: calc((100% - 570px) / 2);
+  }
+
+  .list-view_date, .list-view_status {
+    width: 190px;
+  }
+
+
+  .list-view_name {
+    padding-right: 2rem;
+  }
+
+  .list-view_status {
+    padding-right: 10px;
+  }
+}
+
+.audit-log-list {
+  .list-view_header .cell {
+    text-transform: uppercase;
+  }
+
+  .cell {
+    text-transform: capitalize;
+  }
+
+  .list-view_date {
+    width: 214px;
+  }
+}

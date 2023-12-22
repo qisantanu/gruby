@@ -1,0 +1,177 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "description": "This is a api store for Obu Management Portal.",
+    "version": "1.0.0",
+    "title": "Obu Management Portal"
+  },
+  "paths": {
+    "/api/v1/obu_details": {
+      "post": {
+        "summary": "Add OBU API (V1)",
+        "parameters": [
+          {
+            "name": "obu_label",
+            "in": "header",
+            "type": "string",
+            "description": "OBU Label",
+            "required": true,
+            "example": "7864872643"
+          },
+          {
+            "name": "vehicle_number",
+            "in": "header",
+            "type": "string",
+            "description": "Vehicle Number",
+            "required": true,
+            "example": "FF797B"
+          },
+          {
+            "name": "public_key",
+            "in": "header",
+            "type": "string",
+            "description": "Public Key",
+            "required": true,
+            "example": "XYZ"
+          },
+          {
+            "name": "registered_at",
+            "in": "header",
+            "type": "string",
+            "description": "Registered at (YYYYMMDDHH24MISSFF3 format)",
+            "required": true,
+            "example": "20210413100000000"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+
+    "/api/v1/obu_detail": {
+      "delete": {
+        "summary": "Delete OBU Detail API (V1)",
+        "parameters": [
+          {
+            "name": "label_or_number",
+            "in": "header",
+            "type": "string",
+            "description": "OBU Label or Vehicle Number",
+            "example": "7864872643"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+
+    "/api/v1/developers": {
+      "post": {
+        "summary": "Add developer API (V1) for Datamall",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "type": "string",
+            "description": "API Key",
+            "required": true,
+            "example": "2f91e1b15f0d9fc0a803e4535eff106c"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+
+              },
+
+              "example": {
+                "submitted_at": "8AvmBr6K0WIokaIcinawkovDWvb0gtGtdAwYUT0m1cY\u003d",
+                "extol_notification": true,
+                "applicant": {
+                  "name": "Vgl2j8Hid2YS760dsSccbw\u003d\u003d",
+                  "email": "8qxusd1REVGEJLBmEviSLFv/7CvZfar+fXIiIrhTJlA\u003d",
+                  "contact": "v7MwS3EU/Xi5QTTQZLuQ9w\u003d\u003d",
+                  "company": "7c+lWXKqqjyb4R4Md4dahA\u003d\u003d"
+                },
+                "usage": {
+                  "purpose": ["yfkNlNLl+G/YleujWOjxaQ\u003d\u003d",
+                              "4IzL7vNNB2QsYusSOlVTaA\u003d\u003d",
+                              "k6GMGVSBSmk48H63toz4V+7VULolLj3TFT0DbROzfZ4\u003d"],
+                  "description": "xYH50L2qL/URbsmTPKqaoQ\u003d\u003d"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "OK"
+          },
+          "409": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+
+
+    "/api/v1/test_smtp": {
+      "post": {
+        "summary": "Test SMTP config",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+
+              },
+
+              "example": {
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+
+
+
+  },
+  "definitions": {
+
+  }
+}

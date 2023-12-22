@@ -1,0 +1,71 @@
+.audit-logs {
+  .no-result-found.unavailable {
+    height: calc(100vh - 14rem);
+  }
+}
+
+.by-system {
+  font-style: italic;
+}
+
+article.log-details {
+  .timestamp, .id {
+    width: 13.57rem;
+  }
+
+  .generated-by_group, .item {
+    width: calc(100% - 15.17rem);
+  }
+
+  .generated-by {
+    text-transform: capitalize;
+    width: 100%;
+  }
+
+  .details-container_header {
+    border-bottom-color: #d8e2e6;
+    padding-bottom: 5px;
+
+    .details-container_title {
+      font-size: 14px;
+    }
+  }
+}
+
+.log-summary {
+  margin-bottom: 1rem;
+
+  .details_header_info_panel_item:nth-child(2) {
+    width: calc(100% - 14.28rem);
+
+    .item {
+      text-transform: capitalize;
+      width: 100%;
+    }
+  }
+}
+
+.log-change-set {
+  .list-view_list {
+    height: calc(100vh - 31rem);
+    margin-bottom: 0;
+  }
+
+  .list-view_header, .list-view_list_item {
+    padding: 0.5rem 0;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
+#date_range_modal .form-control.date-range-input {
+  background-color: #fff;
+}
+
+.confirm-account {
+  .was-validated .form-control:invalid, .form-control.is-invalid, .form-control.invalid {
+    background-image: none;
+  }
+}

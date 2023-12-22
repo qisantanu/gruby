@@ -1,0 +1,355 @@
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .main-container {
+    .list-view_list_item .status-action {
+      opacity: 1;
+    }
+  }
+
+  .font-re-sizing {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-screen-wrapper .user-login_unit {
+    padding: 0px 60px;
+    width: 434px;
+  }
+
+  .site-header .export-data {
+    display: block;
+  }
+
+  .primary-container {
+    flex-direction: column;
+
+    .left-panel {
+      height: auto;
+      width: 100%;
+
+      .nav-link {
+        border-left: none;
+        border-top: 5px solid transparent;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+
+        .icon {
+          margin-right: 0;
+        }
+
+        strong {
+          display: inline-flex;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        justify-content: space-around;
+        margin-bottom: 0;
+      }
+    }
+
+    .main-container { 
+      width: 100%;
+    }
+
+    .content.dashboard {
+      flex-flow: wrap;
+
+      .dashboard_card_info_list {
+        height: calc(100vh - 58rem);
+      }
+
+      .dashboard-chart_wrapper {
+        height: calc(100vh - 53rem);
+      }
+
+      .dashboard_wrapper {
+        width: calc(50% - 5px);
+
+        &:last-child {
+          margin-top: 1rem;
+          width: 100%;
+        }
+      }
+    }
+
+    .dashboard-chart_wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .dashboard-chart_wrapper .dashboard_card_info {
+      height: 100%;
+      width: calc(50% - 5px);
+    }
+
+    .developers-list {
+      .cell.list-view_email {
+        display: none;
+      }
+
+      .list-view_company {
+        width: calc((100% - 330px) / 3);
+      }
+    }
+
+    .d-flex.primary-container {
+      .list-container .content_scroller {
+        height: calc(100vh - 18.4rem);
+      }
+    }
+
+    .search-result .content {
+      height: calc(100vh - 13.3rem);
+    }
+
+    .show-overlay .details {
+      height: calc(100vh - 14.4rem);
+    }
+
+    .search-result.all .content .emails-list .content_scroller, .search-result.developers-search .content .emails-list .content_scroller, .search-result.apps-search .content .emails-list .content_scroller, .search-result.users-search .content .emails-list .content_scroller {
+      height: calc(100vh - 18.7rem);
+    }
+
+    .developer-edit-form {
+      height: calc(100vh - 23.25rem);
+    }
+
+    .list-container .content_scroller {
+      height: calc(100vh - 23.4rem);
+    }
+
+    .emails.list-container .content_scroller {
+      height: calc(100vh - 18.25rem);
+    }
+
+    trix-editor.form-control {
+      height: calc(100vh - 34.5rem) !important;
+    }
+
+    .settings-wrapper {
+      height: calc(100vh - 52.5rem);
+    }
+
+    .loader-container {
+      height: calc(100vh - 11.25rem);
+    }
+
+    .permission-group {
+      height: calc(100vh - 40.75rem);
+    }
+
+    .dashboard_card_header_info {
+      justify-content: flex-start !important;
+    }
+
+    .reports_left-panel, .reports_right-panel {
+      height: calc(100vh - 13.5rem);
+      width: calc(50% - 0.5rem);
+    }
+
+    .reports_left-panel {
+      .report-card {
+        flex-flow: column;
+        justify-content: flex-start !important;
+        padding-right: 0;
+
+        .dashboard_card_header {
+          padding-bottom: 0;
+          width: 100%;
+        }
+      }
+
+      .chart-container {
+        height: 11rem;
+        margin: 0 auto;
+        padding-top: 0;
+        width: 96%;
+      }
+
+      .publickeys-and-activations-group {
+        flex-flow: column;
+        height: 40%;
+        min-height: 30rem;
+
+        .publickeys-block {
+          height: 17rem;
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+
+        .activations-block {
+          width: 100%;
+        }
+      }
+
+      .devs-and-app-group {
+        height: calc(60% - 1rem);
+        min-height: 42rem;
+      }
+
+      .reports_right-panel {
+        height: calc(100vh - 13.7rem);
+      }
+    }
+
+    .audit-logs {
+      ul.list-view_list.content_scroller {
+        height: calc(100vh - 27rem);
+      }
+    }
+  }
+
+  .show-overlay .details {
+    width: 100%;
+
+    &_header .page-title {
+      &_icon-container {
+        display: none;
+      }
+    }
+  }
+
+  .settings-container {
+    flex-direction: column;
+
+    .configurations, .datapoints {
+      width: 100%;
+      height: calc(50vh - 7.25rem);
+    }
+
+    .configurations {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .nav-extended {
+    display: none;
+  }
+
+  .emails .list-view.emails-list {
+    .emails-list_recipients {
+      width: 140px;
+    }
+
+    .emails-list_subject {
+      width: calc(100% - 490px);
+    }
+
+    .emails-list_sender {
+      width: 160px;
+    }
+
+    .list-view_date {
+      width: 190px;
+    }
+  }
+
+  .list-view {
+    &_user {
+      min-width: 155px;
+    }
+
+    &_module {
+      width: 90px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .login-screen-wrapper .user-login_welcome {
+    padding: 0 40px;
+    width: 240px;
+  }
+
+  .search-invalid {
+    position: absolute;
+    top: 3.25rem;
+
+    &::after {
+      border-color: transparent transparent #43626d transparent;
+      border-width: 12px 8px;
+      left: 2rem;
+      right: auto;
+      top: -24px;
+    }
+  }
+
+  .left-panel {
+    width: 4.7rem;
+
+    .nav-link {
+      strong {
+        display: none;
+      }
+    }
+  }
+
+  .font-re-sizing {
+    display: none;
+  }
+
+  .main-container {
+    padding: 0 1rem;
+    width: calc(100% - 4.7rem);
+
+    .list-view_list_item .status-action {
+      opacity: 1;
+    }
+  }
+
+  .filter-bar.audit-log-filter {
+    h5 {
+      display: none;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group {
+      flex-flow: column;
+      align-items: flex-start;
+    }
+
+    .apply-filter {
+      margin: 2rem 0 0;
+    }
+  }
+
+  .audit-logs {
+    ul.list-view_list.content_scroller {
+      height: calc(100vh - 20.75rem);
+    }
+  }
+
+  .nav-extended {
+    .nav-extended_nav-item {
+      width: 50px !important;
+
+      .icon-export {
+        margin-left: 9px !important;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .sorting-caret {
+    opacity: 1 !important;
+  }
+}
+
+@media (min-height: 2048px) and (min-width: 1536px) {
+  
+}

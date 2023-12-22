@@ -1,0 +1,13 @@
+<div class="card-header_action-set">
+  <%= link_to "javascript:;", data: { url: admin_app_path(application) }, class: 'js-display-details apps-list_more', title: "App details view" do %>
+    <%= svg_icon_tag('more') %>
+  <% end %>
+
+  <span class="status <%= STATUS_CSS[application.status] %>"><%= application.status %></span>
+
+  <%= render 'shared/status_button', object: application, custom_class: 'apps-list_status' %>
+
+  <span class="apps-list_collapse">
+    <%= svg_icon_tag('arrow') %>
+  </span>
+</div>

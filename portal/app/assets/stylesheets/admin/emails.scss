@@ -1,0 +1,21 @@
+.show-overlay .details_header .page-title.mail-subject {
+  line-height: 2.25rem;
+  width: 100%;
+  word-break: break-word;
+}
+
+.email-readonly {
+  height: calc(100vh - 20.5rem);
+  overflow: auto;
+  padding-top: 1rem !important;
+}
+
+.show-email {
+  .show-overlay .details_header .page-title {
+    width: calc(100% - 50px);
+  }
+
+  div.details-container {
+    padding-top: 0;
+  }
+}

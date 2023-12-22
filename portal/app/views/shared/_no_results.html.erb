@@ -1,0 +1,31 @@
+<section class="content">
+  <div class="text-center no-result-found">
+    <div>
+      <%= svg_icon_tag('no-result', { class: 'icon-sm' }) %>
+      <h5>No result to show</h5>
+
+      <% if params[:query].blank? %>
+        <div>
+          <p>No search term entered in the search bar</p>
+          <div>
+            <strong>Here are the few things you can try:</strong><br>
+            <p>Please enter a new search term.<br>
+              Return to <%= link_to "Home", admin_dashboard_path %>.<br>
+            </p>
+          </div>
+        </div>
+      <% else %>
+        <p>Your search for <strong><%= params[:query].presence %></strong> did not match any record in the portal.</p>
+      <% end %>
+    </div>
+    <br>
+    <% if params[:query].present? %>
+      <div>
+        <strong>Here are the few things you can try:</strong><br>
+        <p>Please check your spelling.<br>
+        Narrow down your search by entering at least 2 characters.<br>
+        Try a different keyword.</p>
+      </div>
+    <% end %>
+  </div>
+</section>

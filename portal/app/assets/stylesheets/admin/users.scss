@@ -1,0 +1,83 @@
+.add-new-user {
+  &_label {
+    width: 7.5rem;
+  }
+
+  &_input {
+    width: calc(100% - 7.5rem);
+  }
+
+  .form-control {
+    width: 19.5rem;
+  }
+
+  .role-type {
+    .form-check {
+      margin-right: 1rem;
+
+      label {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.add-edit-user_wrapper {
+  height: calc(100vh - 18.7rem);
+}
+
+.add-edit-user {
+  background-color: #f2fbff;
+  padding: 0 2rem 1.5rem;
+
+  .current-status {
+    font-size: 0.9rem;
+    margin-right: 1rem;
+    text-transform: uppercase;
+  }
+
+  .form-group:last-child  {
+    margin-bottom: 0;
+  }
+
+  .form-group div.invalid-feedback {
+    top: 1.7rem;
+  }
+}
+
+
+.form-control {
+  &.new-password {
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+  }
+
+  &.confirm-password {
+    border-radius: 0 0 3px 3px;
+  }
+}
+
+.password-validator_message_list {
+  font-size: 13px;
+
+  span {
+    padding-left: 8px;
+    position: relative;
+
+    &:before {
+      background-color: #59666C;
+      border-radius: 50%;
+      content: " ";
+      display: inline-block;
+      height: 5px;
+      left: 0;
+      position: absolute;
+      top: 7px;
+      width: 5px;
+    }
+  }
+
+  .error {
+    color: #dc3545;
+  }
+}

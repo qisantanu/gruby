@@ -1,0 +1,16 @@
+<li class="d-flex align-items-center justify-content-between list-view_list_item developer-row-<%= developer.id %> js-display-details <%= developer.status %>" data-url="<%= admin_developer_path(developer) %>">
+  <div class="cell list-view_name text-ellipsis" title="<%= developer.name %>"><%= developer.name %></div>
+  <div class="cell list-view_company text-ellipsis" title="<%= developer.company %>"><%= developer.company %></div>
+  <div class="cell text-right list-view_date"><%= developer.created_at.to_s(:general) %></div>
+  <div class="cell developers-list_app"><%= app_list(developer) %></div>
+  <div class="cell text-center developers-list_count"><%= developer.applications.length %></div>
+  <div class="cell list-view_email text-ellipsis" title="<%= masking_text(developer.email, :email) %>"><%= masking_text(developer.email, :email) %></div>
+  <div class="cell text-center list-view_status">
+    <span class="status <%= STATUS_CSS[developer.status] %>"><%= developer.status %></span>
+  </div>
+  <div class="cell text-center list-view_status-change">
+    <% if !developer.deactivated? %>
+      <%= render 'shared/status_button', object: developer %>
+    <% end %>
+  </div>
+</li>

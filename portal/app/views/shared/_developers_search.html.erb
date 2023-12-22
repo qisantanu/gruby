@@ -1,0 +1,9 @@
+<section class="search-result content">
+  <% if !@developers.count.zero? || local_assigns[:filter].present? %>
+    <%= render 'shared/filter', type: "developer", search_page: true, search_all: local_assigns[:search_all] %>
+  <% end %>
+  <div class="list-container developers">
+    <%= render 'shared/developers', developers: @developers, editable: false, search: true, filter: local_assigns[:filter] %>
+  </div>
+</section>
+

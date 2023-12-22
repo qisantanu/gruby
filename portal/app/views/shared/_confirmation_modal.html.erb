@@ -1,0 +1,19 @@
+<div id="confirmation_modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Confirming</h2>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p></p>
+      </div>
+
+      <div class="modal-footer justify-content-center button-group">
+        <%= button_tag 'Yes', class: 'btn btn-primary', id: "confirm_ok_button", data: { dismiss: 'modal' } %>
+        <%= button_tag 'Cancel', class: 'btn btn-secondary', data: { dismiss: 'modal' } %>
+      </div>
+    </div>
+  </div>
+</div>

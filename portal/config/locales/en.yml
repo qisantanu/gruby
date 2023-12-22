@@ -1,0 +1,94 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Admin name is required."
+            email:
+              blank: "Admin Email is required."
+              taken: "Admin has already been invited."
+              invalid: "Admin email is invalid"
+            old_password:
+              blank: "Please enter Old password."
+            password:
+              invalid_length: "must contain 12 characters or more."
+        developer:
+          attributes:
+            contact:
+              invalid: "Please enter a valid phone number."
+              blank: "Please enter the contact detail of the Developer."
+            email:
+              blank: "Email can't be blank"
+              invalid: "Email is invalid"
+              taken: "Email has already been taken"
+            name:
+              blank: "Please enter the name of the Developer."
+            submitted_at:
+              blank: "Submitted at can't be blank"
+            sending_email:
+              blank: "Extol notification can't be blank"
+
+  login:
+    errors:
+      invalid: "Incorrect user credentials. <br/> Please enter the correct details to log in."
+      not_active: 'Your account is not active.'
+      password_expired: 'Your password has been expired.'
+      email_required: 'Email is required'
+      password_required: 'Password is required'
+      invalid_email: 'Please provide a valid Email.'
+      otp_expired: 'Your OTP has been expired.'
+      otp_required: 'Please enter the OTP.'
+      wrong_otp: 'OTP entered is incorrect.'
+
+  forgot_password:
+    errors:
+      invalid_email: 'Please provide a valid Email.'
+    flash: 'If that email is registered with us, instructions to reset the password have been sent to you.'
+
+  android: "Android"
+  ios: "iOS"
+
+
+  expired: "Your Reset Password Link has expired."
+  used: "Your Password was changed already using this link"
+  invalid: "Your Reset Password Link is invalid"
+
+  permissions:
+    super_admin: "Super-admin <small>(view full developer data)</small>"
+    admin_management: "Administrator Management"
+    send_email: "Send Emails to Developers"
+    update_settings: "Update Settings"
+    export_data: "Export All Stored Data"

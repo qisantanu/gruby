@@ -1,0 +1,28 @@
+<h3 style="margin-left: 30px">Generate a sample file</h3>
+<%= form_tag sample_files_path, class: "reports-block js-report-download-form", method: :post do %>
+  <div class="form-group">
+    <label for="">Number of Lines</label>
+    <%= number_field( "form", "number_of_lines", class: 'form-controls' ) %>
+  </div>
+  
+  <div class="form-check">
+    <%= radio_button("form", "lang", "ruby", checked: true) %>
+    <label class="form-check-label" for="flexRadioDefault1">
+      Default ruby
+    </label>
+  </div>
+  
+  <div class="form-check">
+    <%= radio_button("form", "lang", "go") %>
+    <label class="form-check-label" for="flexRadioDefault2">
+      Try with GO
+    </label>
+  </div>
+  <br/>
+
+  <%= submit_tag 'Generate sample file', class: "btn btn-primary", data: { disable_with: false } %>
+  
+<% end %>
+<div class="time-taken alert alert-danger" id='time-taken'>
+  <%= @time_taken if @time_taken.present? %>
+<div>

@@ -1,0 +1,19 @@
+<div id="concurrency_error_modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Unable to save changes</h2>
+        <button type="button" class="close js-close-permission" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body text-center">
+        <p>Your changes cannot be saved as another user has made changes while you were editing the page.</p>
+        <p>Please reload the page before making further changes.</p>
+
+        <div class="justify-content-center button-group">
+          <%= button_tag 'Close', class: 'btn btn-block btn-secondary', data: { dismiss: 'modal' } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

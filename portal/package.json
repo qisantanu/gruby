@@ -1,0 +1,50 @@
+{
+  "name": "management_portal",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/actiontext": "^6.0.2-1",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "^5.4.4",
+    "bootstrap": "4.5.3",
+    "c3": "^0.7.15",
+    "chart.js": "^2.9.3",
+    "flatpickr": "^4.6.3",
+    "jquery": "^3.5.1",
+    "jquery-ui-dist": "^1.12.1",
+    "jquery.nicescroll": "^3.7.6",
+    "popper.js": "^1.16.1",
+    "semver": "^7.5.4",
+    "svgxuse": "^1.2.6",
+    "trix": "^1.0.0",
+    "turbolinks": "^5.2.0"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "^16"
+  },
+  "scripts": {
+    "requirements-check": "node verify_node_version.js",
+    "postinstall": "npm run requirements-check"
+  },
+  "resolutions": {
+    "minimist": "1.2.6",
+    "loader-utils": "2.0.4",
+    "eventsource": "1.1.1",
+    "json-schema": "0.4.0",
+    "ansi-html": "0.0.8",
+    "ansi-regex": "4.1.1",
+    "async": "2.6.4",
+    "glob-parent": "^5.1.2",
+    "nth-check": "^2.0.1",
+    "d3-color": "^3.1.0",
+    "postcss": "^8.4.31"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "webpack-dev-server": "^4.15.1",
+    "yarn-audit-fix": "^10.0.1"
+  }
+}

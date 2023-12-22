@@ -1,0 +1,5 @@
+$('body').append("<%= j render 'shared/concurrency_error' %>");
+$('#concurrency_error_modal').modal({
+  backdrop: 'static',
+  keyboard: false
+});

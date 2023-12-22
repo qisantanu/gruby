@@ -1,0 +1,330 @@
+.reports {
+  &_left-panel {
+    height: calc(100vh - 9rem);
+    overflow: auto;
+    width: calc(100% - 26rem);
+
+    .chart-container {
+      width: calc(100% - 19rem);
+    }
+
+    .report-card {
+      height: 50%;
+
+      .dashboard_card_header {
+        background-color: #fff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: 18rem;
+
+        .dashboard_card_header_title {
+          position: absolute;
+          top: 15px;
+          left: 18px;
+        }
+      }
+    }
+
+    .devs-and-app-group {
+      height: calc(68% - 1rem);
+      margin-bottom: 1rem;
+      min-height: 30rem;
+
+      .report-card {
+        padding-right: 0;
+      }
+    }
+
+    .publickeys-and-activations-group {
+      height: 32%;
+      min-height: 15rem;
+
+      .dashboard_card_header {
+        background-color: #fff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        .dashboard_card_header_title {
+          position: absolute;
+          top: 15px;
+          left: 18px;
+        }
+      }
+
+      .publickeys-block {
+        margin-right: 1rem;
+        width: 18.21rem;
+      }
+
+      .activations-block {
+        height: 100%;
+        padding: 1rem;
+        position: relative;
+        width: calc(100% - 19.28rem);
+
+        .chart-container {
+          min-height: 100%;
+          padding: 10px 0 0;
+          width: calc(100% - 1.5rem);
+          margin-left: 1.5rem;
+        }
+
+        .sdk-activations {
+          font-size: 14px;
+          left: -38px;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 50px;
+          transform: rotate(-90deg);
+          width: 7.85rem;
+        }
+      }
+    }
+
+    .chart-container {
+      padding-bottom: 0;
+    }
+  }
+
+  &_right-panel {
+    height: calc(100vh - 9rem);
+    width: 25rem;
+  }
+}
+
+.report-card {
+  padding-right: 1rem;
+
+  &:first-child {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .dashboard_card_header {
+    background-color: #fff;
+  }
+}
+
+.reports-block {
+  margin: 1.2rem 2rem;
+
+  &_title {
+    font-size: 1rem;
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+    position: relative;
+    text-transform: capitalize;
+
+    &::before {
+      background-color: #59666C;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      content: " ";
+      display: inline-block;
+      height: 0.5rem;
+      left: 0.1rem;
+      position: absolute;
+      top: 0.4rem;
+      width: 0.5rem;
+    }
+  }
+
+  .form-group {
+    position: relative;
+    
+    .error {
+      position: absolute;
+      right: 0;
+      top: 3.75rem;
+    }
+  }
+
+  label {
+    font-weight: normal;
+    margin-bottom: 0;
+    text-transform: capitalize;
+
+    &.report-set_download_format {
+      text-transform: uppercase;
+    }
+  }
+
+  .not-applicable-date {
+    .report-set_date-select {
+      color: #90A7B1;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.report-set-wrapper {
+  position: relative;
+  padding: 0.5rem 0 1.5rem 1.2rem;
+
+  &::before {
+    border-left: 1px solid #a9bec7;
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    left: 0.3rem;
+    position: absolute;
+    top: 0;
+    width: 0;
+  }
+}
+
+.report-set {
+  max-height: calc(100vh - 29.8rem);
+  margin-bottom: 0;
+
+  &_list {
+    border-bottom: 1px solid #E1EDF0;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    &_item {
+      margin-bottom: 0.5rem;
+
+      .report-set_info {
+        margin-right: 1rem;
+        position: relative;
+
+        .report-set_info_icon {
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          display: inline-block;
+          height: 1.5rem;
+          line-height: 1.5rem;
+          text-align: center;
+          width: 1.5rem;
+        }
+
+        .report-set_info_message {
+          background-color: #fff;
+          border: 1px solid #ccc;
+          border-radius: 0.2rem;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+          display: none;
+          padding: 0.3rem 0.5rem;
+          position: absolute;
+          font-size: 0.9rem;
+          line-height: 1rem;
+          margin: 0;
+          right: 2.5rem;
+          top: -1px;
+          width: 16rem;
+          z-index: 1;
+
+          &::before, &::after {
+            border-style: solid;
+            display: inline-block;
+            content: " ";
+            height: 0;
+            position: absolute;
+          }
+
+          &::before {
+            border-color: transparent transparent transparent #ccc;
+            border-width: 0.4rem 0 0.4rem 0.8rem;
+            right: -12px;
+            top: 4px;
+          }
+
+          &::after {
+            border-color: transparent transparent transparent #fff;
+            border-width: 0.4rem 0 0.4rem 0.8rem;
+            right: -10px;
+            top: 4px;
+          }
+        }
+
+        &:hover {
+          .report-set_info_message {
+            display: inline-block;
+          }
+        }
+      }
+
+      &:first-child {
+        .report-set_info .report-set_info_message {
+          top: 1px;
+        }
+      }
+
+      &:last-child {
+        .report-set_info .report-set_info_message {
+          bottom: -2px;
+          top: auto;
+
+          &::before, &::after {
+            top: auto;
+            bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  &_date-select {
+    padding-bottom: 1rem;
+  }
+
+  &_date-select {
+    background-color: #F7FEFB;
+    border: 1px solid #B9D0CA;
+    border-radius: 4px;
+    height: 2.14rem;
+    margin: 0.25rem 0 2rem 1.2rem;
+    padding: 0 1rem 0 0.3rem;
+    position: relative;
+    transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    width: calc(100% - 1.2rem);
+
+    &::before {
+      border-left: 1px solid #a9bec7;
+      content: " ";
+      display: inline-block;
+      height: 4.6rem;
+      left: -1rem;
+      position: absolute;
+      top: -0.2rem;
+      width: 0;
+    }
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+
+    .search-filter.date-range {
+      margin-top: 0.2rem;
+    }
+
+    .dropdown-menu {
+      margin-left: -2.4rem;
+      width: 19rem;
+    }
+  }
+
+  &_download {
+    margin: 0.25rem 0 1rem 1.2rem;
+
+    &_format {
+      margin-right: 1rem;
+
+      input {
+        vertical-align: middle;
+      }
+    }
+  }
+}
