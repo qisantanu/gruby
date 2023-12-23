@@ -45,10 +45,9 @@ docker build -t gruby-portal:1.0.5-local . \
      --build-arg GROUP_ID=1000 \
      --build-arg RUBY_VERSION=3.0.0 \
      --build-arg BUNDLER_VERSION=2.1.4 \
-     --build-arg PG_MAJOR=14 \
      --build-arg NODE_MAJOR=16 \
      --build-arg YARN_VERSION=1.22.19 \
-     --build-arg SECRET_KEY_BASE=blalbalblablahblablah \
+     --build-arg SECRET_KEY_BASE=2915f76d5cc723c5b4b5db50f537e775604f21e50b15f99c36d81c72d2bf20ed6a15406fad0b10fab07af1633016bad2151f4cb515e14f19057600921beffcd7 \
      -f Dockerfile.prod
 ```
 
