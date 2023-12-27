@@ -69,19 +69,3 @@ docker run -it \
   -p 3000:3000 \
   gruby-portal:1.0.5-local
 ```
-[]
----
-
-### Github Actions
-
-Check GitHub Actions `.github` configuration folder:
-
-```bash
-├── labeler.config.yml        # config file for labeler.yml
-└── workflows
-    ├── labeler.yml           # automatically labels PR according to the labler.config.yml settings
-    |                         # leaves PR-comments with misalignemnts
-    |                         # tries to auto-fix where possible
-    ├── build.yml             # for every PR builds Dockerfile.prod
-    └── docker-publish.yml    # upon new Github Release builds and publishes docker image into Artifactory
-```
