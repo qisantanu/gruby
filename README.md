@@ -14,7 +14,7 @@ The following software is required to work with the repository.
 This project currently works with:
 
 ![Ruby version](https://img.shields.io/static/v1?label=Ruby&message=3.0.0&color=red&&style=for-the-badge)
-![Rails](https://img.shields.io/static/v1?label=Rails&message=6.1.7.6&color=9C312A&&style=for-the-badge)
+![Rails](https://img.shields.io/static/v1?label=Rails&message=7.0.0&color=9C312A&&style=for-the-badge)
 ![Bundler](https://img.shields.io/static/v1?label=Bundler&message=2.2.3&color=f77b07&&style=for-the-badge)
 ![Node](https://img.shields.io/static/v1?label=node&message=16.20.2&color=88B860&&style=for-the-badge)
 ![Golang](https://img.shields.io/static/v1?label=Go&message=1.18.1&color=87Ceeb&style=for-the-badge)
