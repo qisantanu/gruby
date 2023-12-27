@@ -19,7 +19,7 @@ class SampleFilesController < ApplicationController
     else
       color = 'blue'
       client = Quartz::Client.new(bin_path: Rails.root.join('go_scripts', 'populate_sample_file').to_s)
-      response = client[:resolver].call('FileGenerate', 'A'=> lines)
+      client[:populate_sample_file].call('FileGenerate', 'Lines'=> lines)
       @sample_file = File.read(Rails.root.join('samples', 'test_with_go.txt'))
     end
 

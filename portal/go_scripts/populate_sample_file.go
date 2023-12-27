@@ -15,7 +15,7 @@ import (
 type Resolver struct{}
 
 type Args struct {
-	A int
+	Lines int
 }
 
 type Response struct {
@@ -27,7 +27,7 @@ type Response struct {
 type Adder struct{}
 
 func (t *Resolver) FileGenerate(args Args, response *Response) error {
-	n := args.A
+	n := args.Lines
 
 	if _, err := os.Stat("samples/test_with_go.txt"); err == nil {
 		os.Remove("samples/test_with_go.txt")
@@ -84,6 +84,7 @@ func (t *Resolver) FileGenerate(args Args, response *Response) error {
 type AddArgs struct {
 	A int
 	B int
+	C int
 }
 
 type AddResponse struct {
@@ -91,7 +92,7 @@ type AddResponse struct {
 }
 
 func (t *Adder) Add(args AddArgs, response *AddResponse) error {
-	num := args.A + args.B
+	num := args.A + args.B + args.C
 
 	*response = AddResponse{Sum: num}
 	return nil
@@ -104,7 +105,7 @@ func (t *Adder) Add(args AddArgs, response *AddResponse) error {
 func main() {
 	/* === This is the portion of the RPC server === */
 	resolver := &Resolver{}
-	quartz.RegisterName("resolver", resolver)
+	quartz.RegisterName("populate_sample_file", resolver)
 	my_adder_resolver := &Adder{}
 	quartz.RegisterName("my_adder", my_adder_resolver)
 	fmt.Println("RPC server started")
